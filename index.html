@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Jornal Milionários</title>
+<style>
+  :root{
+    --azul-claro:#29ABE2;
+    --azul-escuro:#1B4F8C;
+    --azul-profundo:#0E2A4D;
+    --dourado:#F2C12E;
+    --branco:#FFFFFF;
+    --cinza:#6E7B8B;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Segoe UI',Arial,sans-serif;
+    background:linear-gradient(180deg,#f4f8fb 0%,#e8eef5 100%);
+    color:var(--azul-profundo);
+    padding-bottom:60px;
+  }
+  .topo{
+    width:100%;
+    max-height:280px;
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    justify-content:center;
+  }
+  .topo img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+  }
+
+
+  .grid{
+    max-width:1100px;
+    margin:0 auto;
+    padding:24px 16px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:22px;
+  }
+  .card{
+    background:var(--branco);
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 6px 18px rgba(14,42,77,0.12);
+    border:1px solid rgba(27,79,140,0.08);
+    display:flex;
+    flex-direction:column;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 26px rgba(14,42,77,0.18);
+  }
+  .card-img-wrap{
+    width:100%;
+    aspect-ratio:1080/1440;
+    border-bottom:1px solid var(--azul-claro);
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .card-img-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+  }
+  .card-body{
+    padding:16px 18px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:12px;
+    flex:1;
+  }
+  .card-title{
+    font-size:17px;
+    font-weight:700;
+    color:var(--azul-profundo);
+  }
+  .card-title small{
+    display:block;
+    font-size:13px;
+    font-weight:500;
+    color:var(--cinza);
+    margin-top:2px;
+  }
+  .card-btn{
+    margin-top:auto;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    background:linear-gradient(90deg,var(--azul-claro),var(--azul-escuro));
+    color:#fff;
+    text-decoration:none;
+    padding:11px 18px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.3px;
+    transition:opacity .2s ease, transform .2s ease;
+  }
+  .card-btn:hover{
+    opacity:.92;
+    transform:scale(1.02);
+  }
+  .card-btn:active{
+    transform:scale(.98);
+  }
+  .rodape{
+    text-align:center;
+    color:var(--cinza);
+    font-size:13px;
+    padding:30px 16px 10px;
+  }
+
+</style>
+</head>
+<body>
+
+  <div class="topo">
+    <img src="topo.png" alt="Topo">
+  </div>
+
+  <div class="grid">
+
+    <!-- Desaparecido -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="desaparecido.png" alt="Desaparecido">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Desaparecido</div>
+        <a class="card-btn" href="https://canva.link/h8yzrng9nim9zzr" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+      </div>
+    </div>
+
+    <!-- Neutro -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="neutro.png" alt="Neutro">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Neutro</div>
+        <a class="card-btn" href="https://canva.link/eq6o6ugjjxb6lci" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+      </div>
+    </div>
+
+    <!-- Urgente -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="urgente.png" alt="Urgente">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Urgente</div>
+        <a class="card-btn" href="https://canva.link/esc7k31rq50dghw" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+      </div>
+    </div>
+
+    <!-- Capa YouTube Podcast -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="capayoutube-1.png" alt="Capa YouTube Podcast">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Capa YouTube Podcast</div>
+        <a class="card-btn" href="https://canva.link/2vn77mdzgg4nhyg" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+      </div>
+    </div>
+
+    <!-- Capa YouTube Podcast Ex. Aplicado -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="capayoutube-2.png" alt="Capa YouTube Podcast Ex. Aplicado">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Capa YouTube Podcast<small>Exemplo Aplicado</small></div>
+        <a class="card-btn" href="https://canva.link/ex379oxo4iktj6h" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="rodape">Por Adriele Almeida • Estrategista Digital</p>
+
+</body>
+</html>
