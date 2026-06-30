@@ -40,10 +40,14 @@
     margin:0 auto;
     padding:24px 16px;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    grid-template-columns:1fr;
+    justify-content:center;
     gap:22px;
   }
   .card{
+    width:100%;
+    max-width:340px;
+    margin:0 auto;
     background:var(--branco);
     border-radius:14px;
     overflow:hidden;
