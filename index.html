@@ -14,28 +14,69 @@
     --azul-claro:#29ABE2;
     --azul-escuro:#1B4F8C;
     --azul-profundo:#0E2A4D;
-    --dourado:#F2C12E;
     --branco:#FFFFFF;
     --cinza:#6E7B8B;
   }
+
   *{box-sizing:border-box;margin:0;padding:0;}
+
   body{
     font-family:'Segoe UI',Arial,sans-serif;
     background:linear-gradient(180deg,#f4f8fb 0%,#e8eef5 100%);
     color:var(--azul-profundo);
     padding-bottom:60px;
   }
+
   .topo{
     width:100%;
+    max-height:280px;
+    overflow:hidden;
+    position:relative;
     display:flex;
     justify-content:center;
   }
+
   .topo img{
     width:100%;
     height:auto;
+    max-height:280px;
+    object-fit:cover;
     display:block;
   }
 
+  .drive-area{
+    display:flex;
+    justify-content:center;
+    padding:22px 16px 0;
+  }
+
+  .drive-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:12px 20px;
+    border-radius:9px;
+    background:#fff;
+    color:#202124;
+    border:1px solid #dadce0;
+    box-shadow:0 3px 10px rgba(14,42,77,.08);
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    transition:transform .2s ease,box-shadow .2s ease;
+  }
+
+  .drive-btn:hover{
+    transform:translateY(-1px);
+    box-shadow:0 5px 14px rgba(14,42,77,.12);
+  }
+
+  .drive-btn svg{
+    width:22px;
+    height:22px;
+    flex:0 0 22px;
+  }
 
   .grid{
     max-width:1100px;
@@ -46,6 +87,7 @@
     justify-content:center;
     gap:22px;
   }
+
   .card{
     width:100%;
     max-width:480px;
@@ -53,23 +95,43 @@
     background:var(--branco);
     border-radius:14px;
     overflow:hidden;
-    box-shadow:0 6px 18px rgba(14,42,77,0.12);
-    border:1px solid rgba(27,79,140,0.08);
+    box-shadow:0 6px 18px rgba(14,42,77,.12);
+    border:1px solid rgba(27,79,140,.08);
     display:flex;
     flex-direction:column;
   }
+
   .card-img-wrap{
     width:100%;
+    min-height:220px;
+    background:#f5f7fa;
     border-bottom:1px solid var(--azul-claro);
     display:flex;
     justify-content:center;
     align-items:center;
+    position:relative;
+    overflow:hidden;
   }
+
   .card-img-wrap img{
     width:100%;
     height:auto;
     display:block;
   }
+
+  .image-placeholder{
+    display:none;
+    width:100%;
+    min-height:220px;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:28px;
+    color:var(--cinza);
+    font-size:14px;
+    font-weight:600;
+  }
+
   .card-body{
     padding:16px 18px 20px;
     display:flex;
@@ -79,18 +141,21 @@
     gap:12px;
     flex:1;
   }
+
   .card-title{
     font-size:17px;
     font-weight:700;
     color:var(--azul-profundo);
   }
+
   .card-title small{
     display:block;
     font-size:13px;
     font-weight:500;
     color:var(--cinza);
-    margin-top:2px;
+    margin-top:3px;
   }
+
   .card-btn{
     margin-top:auto;
     display:inline-flex;
@@ -105,108 +170,119 @@
     font-size:14px;
     font-weight:600;
     letter-spacing:.3px;
-    transition:opacity .2s ease, transform .2s ease;
+    transition:opacity .2s ease,transform .2s ease;
   }
-  .card-btn:hover{
-    opacity:.92;
-    transform:scale(1.02);
-  }
-  .card-btn:active{
-    transform:scale(.98);
-  }
+
+  .card-btn:hover{opacity:.92;transform:scale(1.02);}
+  .card-btn:active{transform:scale(.98);}
+
   .rodape{
     text-align:center;
     color:var(--cinza);
     font-size:13px;
     padding:30px 16px 10px;
   }
-
 </style>
 </head>
 <body>
 
   <div class="topo">
-    <img src="topo.png" alt="Topo">
+    <img src="topo.png" alt="Jornal Milionários">
   </div>
 
-  <div class="grid">
-
-<div class="card">
-  <div class="card-img-wrap">
-    <img src="[NOME_DO_ARQUIVO.png]">
+  <div class="drive-area">
+    <a class="drive-btn" href="https://drive.google.com/drive/u/0/folders/1R9-_unp5xud5RqMx4swq0eOturYH9H5w?usp=drive_link&pli=1" target="_blank" rel="noopener" aria-label="Abrir Google Drive">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="#0F9D58" d="M7.74 3h4.52l4.52 7.83h-4.52z"/>
+        <path fill="#F4B400" d="M7.74 3 3.22 10.83l2.26 3.92L10 6.92z"/>
+        <path fill="#4285F4" d="M5.48 14.75h9.04l2.26-3.92h-9.04z"/>
+        <path fill="#4285F4" d="m14.52 14.75-2.26 3.92h4.52L21.3 10.83h-4.52z"/>
+        <path fill="#0F9D58" d="M3.22 10.83 7.74 18.67h4.52l-4.52-7.84z"/>
+      </svg>
+      <span>Google Drive</span>
+    </a>
   </div>
-  <div class="card-body">
-    <div class="card-title">Desaparecido<small>Post 1080x1440px</small></div>
-    <a class="card-btn" href="https://canva.link/ygjwqzg1pamwchm" target="_blank">Abrir no Canva ↗</a>
-  </div>
-</div>
 
-    <div class="card">
+  <main class="grid">
+
+    <section class="card">
       <div class="card-img-wrap">
-        <img src="capayoutube-2.png" alt="Capa YouTube Podcast Ex. Aplicado">
+        <img src="positivo.png" alt="Positivo - JM" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="image-placeholder">Imagem pendente: positivo.png</div>
       </div>
       <div class="card-body">
-        <div class="card-title">Capa YouTube Podcast<small>Exemplo Aplicado</small></div>
-        <a class="card-btn" href="https://canva.link/ex379oxo4iktj6h" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+        <div class="card-title">Positivo - JM<small>Post 1080 × 1440 px</small></div>
+        <a class="card-btn" href="https://canva.link/swm0mxb89hotkfi" target="_blank" rel="noopener">Abrir no Canva ↗</a>
       </div>
-    </div>
-    
-    <!-- Desaparecido -->
-    <div class="card">
+    </section>
+
+    <section class="card">
       <div class="card-img-wrap">
-        <img src="desaparecido.png" alt="Desaparecido">
+        <img src="negativo.png" alt="Negativo - JM" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="image-placeholder">Imagem pendente: negativo.png</div>
       </div>
       <div class="card-body">
-        <div class="card-title">Desaparecido</div>
-        <a class="card-btn" href="https://canva.link/h8yzrng9nim9zzr" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+        <div class="card-title">Negativo - JM<small>Post 1080 × 1440 px</small></div>
+        <a class="card-btn" href="https://canva.link/m1zyblm9ld9hj9i" target="_blank" rel="noopener">Abrir no Canva ↗</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Neutro -->
-    <div class="card">
+    <section class="card">
       <div class="card-img-wrap">
-        <img src="neutro.png" alt="Neutro">
+        <img src="capareels-positivo-1.png" alt="P - Capa para Reels - Mod 01" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="image-placeholder">Imagem pendente: capareels-positivo-1.png</div>
       </div>
       <div class="card-body">
-        <div class="card-title">Neutro</div>
-        <a class="card-btn" href="https://canva.link/eq6o6ugjjxb6lci" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+        <div class="card-title">P - Capa para Reels - Mod 01<small>Story/Reels 1080 × 1920 px</small></div>
+        <a class="card-btn" href="https://canva.link/acwn0ccx48vwdie" target="_blank" rel="noopener">Abrir no Canva ↗</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Urgente -->
-    <div class="card">
+    <section class="card">
       <div class="card-img-wrap">
-        <img src="urgente.png" alt="Urgente">
+        <img src="capareels-ajuste-formato.png" alt="Capa para Reels - Negativo e Positivo - Ajuste de Formato" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="image-placeholder">Imagem pendente: capareels-ajuste-formato.png</div>
       </div>
       <div class="card-body">
-        <div class="card-title">Urgente</div>
-        <a class="card-btn" href="https://canva.link/esc7k31rq50dghw" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+        <div class="card-title">Capa para Reels - Negativo e Positivo<small>Ajuste de formato</small></div>
+        <a class="card-btn" href="https://canva.link/jlecy5tkoq8n1yw" target="_blank" rel="noopener">Abrir no Canva ↗</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Capa YouTube Podcast -->
-    <div class="card">
+    <section class="card">
       <div class="card-img-wrap">
-        <img src="capayoutube-1.png" alt="Capa YouTube Podcast">
+        <img src="capareels-negativo-2.png" alt="N - Capa para Reels - Mod 02" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="image-placeholder">Imagem pendente: capareels-negativo-2.png</div>
       </div>
       <div class="card-body">
-        <div class="card-title">Capa YouTube Podcast</div>
-        <a class="card-btn" href="https://canva.link/2vn77mdzgg4nhyg" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+        <div class="card-title">N - Capa para Reels - Mod 02<small>Story/Reels 1080 × 1920 px</small></div>
+        <a class="card-btn" href="https://canva.link/e5i8i113e17ou4d" target="_blank" rel="noopener">Abrir no Canva ↗</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Capa YouTube Podcast Ex. Aplicado -->
-    <div class="card">
+    <section class="card">
       <div class="card-img-wrap">
-        <img src="capayoutube-2.png" alt="Capa YouTube Podcast Ex. Aplicado">
+        <img src="capayoutube-3.png" alt="Capa YouTube Podcast - JM" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="image-placeholder">Imagem pendente: capayoutube-3.png</div>
       </div>
       <div class="card-body">
-        <div class="card-title">Capa YouTube Podcast<small>Exemplo Aplicado</small></div>
-        <a class="card-btn" href="https://canva.link/ex379oxo4iktj6h" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+        <div class="card-title">Capa YouTube Podcast - JM<small>1920 × 1080 px</small></div>
+        <a class="card-btn" href="https://canva.link/ko4wj7mol08chej" target="_blank" rel="noopener">Abrir no Canva ↗</a>
       </div>
-    </div>
+    </section>
 
-  </div>
+    <section class="card">
+      <div class="card-img-wrap">
+        <img src="desaparecido-2.png" alt="Desaparecido - JM - Editável" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="image-placeholder">Imagem pendente: desaparecido-2.png</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Desaparecido - JM - Editável<small>Post vertical</small></div>
+        <a class="card-btn" href="https://canva.link/ygjwqzg1pamwchm" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+      </div>
+    </section>
+
+  </main>
 
   <p class="rodape">Por Adriele Almeida • Estrategista Digital</p>
 
