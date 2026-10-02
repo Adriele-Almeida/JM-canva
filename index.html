@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:title" content="Templates JM Editáveis no Canva" />
 <meta property="og:description" content="Design Editorial Exclusivo do Perfil Jornal Milionários Barreiro." />
-<meta property="og:image" content="https://www.descodificado.com.br/JM-canva/miniatura.png" />
-<meta property="og:url" content="https://www.descodificado.com.br/JM-canva/" />
+<meta property="og:image" content="miniatura.png" />
 <meta property="og:type" content="website" />
 <title>Jornal Milionários</title>
 <style>
@@ -14,7 +13,6 @@
     --azul-claro:#29ABE2;
     --azul-escuro:#1B4F8C;
     --azul-profundo:#0E2A4D;
-    --dourado:#F2C12E;
     --branco:#FFFFFF;
     --cinza:#6E7B8B;
   }
@@ -27,16 +25,19 @@
   }
   .topo{
     width:100%;
+    max-height:280px;
+    overflow:hidden;
+    position:relative;
     display:flex;
     justify-content:center;
   }
   .topo img{
     width:100%;
     height:auto;
+    max-height:280px;
+    object-fit:cover;
     display:block;
   }
-
-
   .grid{
     max-width:1100px;
     margin:0 auto;
@@ -53,23 +54,26 @@
     background:var(--branco);
     border-radius:14px;
     overflow:hidden;
-    box-shadow:0 6px 18px rgba(14,42,77,0.12);
-    border:1px solid rgba(27,79,140,0.08);
+    box-shadow:0 6px 18px rgba(14,42,77,.12);
+    border:1px solid rgba(27,79,140,.08);
     display:flex;
     flex-direction:column;
   }
-  .card-img-wrap{
+  .card-preview{
     width:100%;
+    background:#fff;
     border-bottom:1px solid var(--azul-claro);
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    overflow:hidden;
   }
-  .card-img-wrap img{
+  .card-preview iframe{
     width:100%;
-    height:auto;
+    height:100%;
+    border:0;
     display:block;
   }
+  .ratio-3x4{aspect-ratio:3/4;}
+  .ratio-9x16{aspect-ratio:9/16;}
+  .ratio-16x9{aspect-ratio:16/9;}
   .card-body{
     padding:16px 18px 20px;
     display:flex;
@@ -89,7 +93,7 @@
     font-size:13px;
     font-weight:500;
     color:var(--cinza);
-    margin-top:2px;
+    margin-top:3px;
   }
   .card-btn{
     margin-top:auto;
@@ -105,110 +109,97 @@
     font-size:14px;
     font-weight:600;
     letter-spacing:.3px;
-    transition:opacity .2s ease, transform .2s ease;
+    transition:opacity .2s ease,transform .2s ease;
   }
-  .card-btn:hover{
-    opacity:.92;
-    transform:scale(1.02);
-  }
-  .card-btn:active{
-    transform:scale(.98);
-  }
+  .card-btn:hover{opacity:.92;transform:scale(1.02);}
+  .card-btn:active{transform:scale(.98);}
   .rodape{
     text-align:center;
     color:var(--cinza);
     font-size:13px;
     padding:30px 16px 10px;
   }
-
 </style>
 </head>
 <body>
-
   <div class="topo">
-    <img src="topo.png" alt="Topo">
+    <img src="topo.png" alt="Jornal Milionários">
   </div>
 
-  <div class="grid">
-
-<div class="card">
-  <div class="card-img-wrap">
-    <img src="[NOME_DO_ARQUIVO.png]">
-  </div>
-  <div class="card-body">
-    <div class="card-title">Desaparecido<small>Post 1080x1440px</small></div>
-    <a class="card-btn" href="https://canva.link/ygjwqzg1pamwchm" target="_blank">Abrir no Canva ↗</a>
-  </div>
-</div>
-
-    <div class="card">
-      <div class="card-img-wrap">
-        <img src="capayoutube-2.png" alt="Capa YouTube Podcast Ex. Aplicado">
-      </div>
+  <main class="grid">
+    <section class="card">
+      <div class="card-preview ratio-3x4"><iframe loading="lazy" src="https://www.canva.com/design/DAHN_tRZWoY/tQsPbRqWMjx9VyxaVjBLEw/view?embed" title="Positivo - JM"></iframe></div>
       <div class="card-body">
-        <div class="card-title">Capa YouTube Podcast<small>Exemplo Aplicado</small></div>
-        <a class="card-btn" href="https://canva.link/ex379oxo4iktj6h" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+        <div class="card-title">Positivo - JM<small>Post 1080 × 1440 px</small></div>
+        <a class="card-btn" href="https://canva.link/swm0mxb89hotkfi" target="_blank" rel="noopener">Abrir no Canva ↗</a>
       </div>
-    </div>
-    
-    <!-- Desaparecido -->
-    <div class="card">
-      <div class="card-img-wrap">
-        <img src="desaparecido.png" alt="Desaparecido">
-      </div>
-      <div class="card-body">
-        <div class="card-title">Desaparecido</div>
-        <a class="card-btn" href="https://canva.link/h8yzrng9nim9zzr" target="_blank" rel="noopener">Abrir no Canva ↗</a>
-      </div>
-    </div>
+    </section>
 
-    <!-- Neutro -->
-    <div class="card">
-      <div class="card-img-wrap">
-        <img src="neutro.png" alt="Neutro">
-      </div>
+    <section class="card">
+      <div class="card-preview ratio-3x4"><iframe loading="lazy" src="https://www.canva.com/design/DAHOHBZQB_8/oHMYuqxtzOK9rIM-ljqG_w/view?embed" title="Negativo - JM"></iframe></div>
       <div class="card-body">
-        <div class="card-title">Neutro</div>
-        <a class="card-btn" href="https://canva.link/eq6o6ugjjxb6lci" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+        <div class="card-title">Negativo - JM<small>Post 1080 × 1440 px</small></div>
+        <a class="card-btn" href="https://canva.link/m1zyblm9ld9hj9i" target="_blank" rel="noopener">Abrir no Canva ↗</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Urgente -->
-    <div class="card">
-      <div class="card-img-wrap">
-        <img src="urgente.png" alt="Urgente">
-      </div>
+    <section class="card">
+      <div class="card-preview ratio-9x16"><iframe loading="lazy" src="https://www.canva.com/design/DAHOKdjLPaA/OtLpzYSg4eDEDOXYj1zuyg/view?embed" title="P - Capa para Reels - Mod 01"></iframe></div>
       <div class="card-body">
-        <div class="card-title">Urgente</div>
-        <a class="card-btn" href="https://canva.link/esc7k31rq50dghw" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+        <div class="card-title">P - Capa para Reels - Mod 01<small>Story/Reels 1080 × 1920 px</small></div>
+        <a class="card-btn" href="https://canva.link/acwn0ccx48vwdie" target="_blank" rel="noopener">Abrir no Canva ↗</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Capa YouTube Podcast -->
-    <div class="card">
-      <div class="card-img-wrap">
-        <img src="capayoutube-1.png" alt="Capa YouTube Podcast">
-      </div>
+    <section class="card">
+      <div class="card-preview ratio-9x16"><iframe loading="lazy" src="https://www.canva.com/design/DAHOKe9gSTA/aW_tkRZ78V7Gnrh5k3z8FA/view?embed" title="N - Capa para Reels - Mod 01"></iframe></div>
       <div class="card-body">
-        <div class="card-title">Capa YouTube Podcast</div>
-        <a class="card-btn" href="https://canva.link/2vn77mdzgg4nhyg" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+        <div class="card-title">N - Capa para Reels - Mod 01<small>Story/Reels 1080 × 1920 px</small></div>
+        <a class="card-btn" href="https://canva.link/352hm3trd7o88rz" target="_blank" rel="noopener">Abrir no Canva ↗</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Capa YouTube Podcast Ex. Aplicado -->
-    <div class="card">
-      <div class="card-img-wrap">
-        <img src="capayoutube-2.png" alt="Capa YouTube Podcast Ex. Aplicado">
-      </div>
+    <section class="card">
+      <div class="card-preview ratio-9x16"><iframe loading="lazy" src="https://www.canva.com/design/DAHOKQqfV44/teqfcLaZeEzSg1ft7eR2hA/view?embed" title="P - Capa para Reels - Mod 02"></iframe></div>
       <div class="card-body">
-        <div class="card-title">Capa YouTube Podcast<small>Exemplo Aplicado</small></div>
-        <a class="card-btn" href="https://canva.link/ex379oxo4iktj6h" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+        <div class="card-title">P - Capa para Reels - Mod 02<small>Story/Reels 1080 × 1920 px</small></div>
+        <a class="card-btn" href="https://canva.link/wzcls6gbk11ql7h" target="_blank" rel="noopener">Abrir no Canva ↗</a>
       </div>
-    </div>
+    </section>
 
-  </div>
+    <section class="card">
+      <div class="card-preview ratio-9x16"><iframe loading="lazy" src="https://www.canva.com/design/DAHOKTrmSLo/ETf5y2qf1LRtuHBumPBayA/view?embed" title="N - Capa para Reels - Mod 02"></iframe></div>
+      <div class="card-body">
+        <div class="card-title">N - Capa para Reels - Mod 02<small>Story/Reels 1080 × 1920 px</small></div>
+        <a class="card-btn" href="https://canva.link/e5i8i113e17ou4d" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-preview ratio-16x9"><iframe loading="lazy" src="https://www.canva.com/design/DAHN_JX4XXk/8zyPj6kE3TC2aNwC2hMfUw/view?embed" title="Capa YouTube Podcast - JM"></iframe></div>
+      <div class="card-body">
+        <div class="card-title">Capa YouTube Podcast - JM<small>1920 × 1080 px</small></div>
+        <a class="card-btn" href="https://canva.link/ko4wj7mol08chej" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-preview ratio-3x4"><iframe loading="lazy" src="https://www.canva.com/design/DAHN_DBsSKg/n_BahcmUMNEeSqkEFgZhiQ/view?embed" title="Desaparecido - JM - Editável"></iframe></div>
+      <div class="card-body">
+        <div class="card-title">Desaparecido - JM - Editável<small>Post vertical</small></div>
+        <a class="card-btn" href="https://canva.link/ygjwqzg1pamwchm" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-preview ratio-9x16"><iframe loading="lazy" src="https://www.canva.com/design/DAHOq381u10/23DZ1A-ky7wl8-oKagOJnQ/view?embed" title="Capa para Reels - Negativo e Positivo - Ajuste de Formato"></iframe></div>
+      <div class="card-body">
+        <div class="card-title">Capa para Reels - Negativo e Positivo<small>Ajuste de formato</small></div>
+        <a class="card-btn" href="https://canva.link/jlecy5tkoq8n1yw" target="_blank" rel="noopener">Abrir no Canva ↗</a>
+      </div>
+    </section>
+  </main>
 
   <p class="rodape">Por Adriele Almeida • Estrategista Digital</p>
-
 </body>
 </html>
